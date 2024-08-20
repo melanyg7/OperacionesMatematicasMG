@@ -74,7 +74,7 @@ class OperacionesMatematica4
 
             if (operacionValida)
             {
-                Console.WriteLine("Resultado:");
+                Console.WriteLine("Resultado: ");
             }
         }
     }
