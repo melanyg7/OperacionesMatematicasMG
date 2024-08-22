@@ -1,41 +1,41 @@
 ﻿using System;
 
-
-class OperacionesMatematica4
-
+class Operaciones
 {
-    private static int num2;
     static void Main(string[] args)
     {
         while (true)
         {
-            Console.WriteLine("Operaciones Matematicas ");
-            Console.WriteLine("1 sumar");
-            Console.WriteLine("2 restar");
-            Console.WriteLine("3 multiplicar");
-            Console.WriteLine("4 dividir");
-            Console.WriteLine("5 salir..");
+            Console.WriteLine("//Bienvenido al sistema de Calculadora LISETH//");
+            Console.WriteLine("");
+            Console.WriteLine("//Estas son Las del Sistema");
+            Console.WriteLine("1. dividir");
+            Console.WriteLine("2. multiplicar");
+            Console.WriteLine("3. sumar");
+            Console.WriteLine("4. restar");
+            Console.WriteLine("5. salir");
 
-            Console.Write("Seleccione una operacion matematica 1,2,3,4,5: ");
+
+            Console.Write("Selecciona una operación : ");
             string opcion = Console.ReadLine();
 
             if (opcion == "5")
             {
-                Console.WriteLine("Saliendo del programa de OM.....");
+                Console.WriteLine("Saliendo del programa...");
                 break;
             }
 
-            Console.Write("Ingrese el primer numero: ");
+            Console.Write("Ingresa un numero: ");
             if (!double.TryParse(Console.ReadLine(), out double num1))
             {
-                Console.WriteLine("Error, favor ingrese un numero valido");
+                Console.WriteLine("Error: Por favor ingresa un numero válido.");
                 continue;
             }
 
-            Console.Write("Ingrese el segundo nemero: ");
+            Console.Write("Ingresa el segundo numero: ");
             if (!double.TryParse(Console.ReadLine(), out double num2))
             {
-                Console.WriteLine("Error, favor ingrese un numero valido");
+                Console.WriteLine("Error: Por favor ingresa un número valido");
                 continue;
             }
 
@@ -62,20 +62,21 @@ class OperacionesMatematica4
                 }
                 else
                 {
-                    Console.WriteLine("Error en la Division ");
+                    Console.WriteLine("Error: División por cero no permitida");
                     operacionValida = false;
                 }
             }
             else
             {
-                Console.WriteLine("Opcion no ejecutada, intente mas tarde ");
+                Console.WriteLine("Opción no válida, intenta de nuevo");
                 operacionValida = false;
             }
 
             if (operacionValida)
             {
-                Console.WriteLine("Resultado: ");
+                Console.WriteLine($"Resultado: {resultado}");
             }
+
         }
     }
 }
